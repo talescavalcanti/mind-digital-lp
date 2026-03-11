@@ -62,7 +62,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20, filter: "blur(10px)", scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="text-6xl sm:text-7xl font-extrabold text-vda-gradient tabular-nums tracking-tighter"
+                className="text-6xl sm:text-7xl font-extrabold text-[#00c853] tabular-nums tracking-tighter"
               >
                 {progress}%
               </motion.div>

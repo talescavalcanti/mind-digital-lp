@@ -1,7 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const CircularGallery = dynamic(
     () => import("@/components/ui/circular-gallery"),
@@ -26,17 +28,51 @@ const moduleItems = [
 ];
 
 export default function ModulesCarousel() {
+    const sectionRef = useRef<HTMLElement>(null);
+    const headerRef = useRef<HTMLDivElement>(null);
+    const galleryContainerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const ctx = gsap.context(() => {
+            gsap.from(headerRef.current, {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 80%",
+                }
+            });
+
+            gsap.from(galleryContainerRef.current, {
+                y: 100,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 50%",
+                }
+            });
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <section className="relative w-full bg-black py-16 overflow-hidden">
-            <div className="text-center mb-8">
+        <section ref={sectionRef} className="relative w-full bg-black py-16 overflow-hidden z-10">
+            <div ref={headerRef} className="text-center mb-8 opacity-100">
                 <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-                    Módulos do <span className="text-vda-gradient">Método</span>
+                    Módulos do <span className="text-[#00c853]">Método</span>
                 </h2>
                 <p className="text-white/60 text-lg mt-3 max-w-2xl mx-auto">
                     Conteúdo completo para transformar seu negócio digital.
                 </p>
             </div>
-            <div className="w-full h-[500px] md:h-[900px] relative">
+            <div ref={galleryContainerRef} className="w-full h-[500px] md:h-[900px] relative opacity-100">
                 <CircularGallery
                     items={moduleItems}
                     bend={1}
