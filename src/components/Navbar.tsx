@@ -26,7 +26,7 @@ export function Navbar() {
             className="w-full h-full object-cover"
           />
         </motion.div>
-        <span className="text-vda-gradient font-bold tracking-tight text-sm sm:text-base truncate">Mind Digital</span>
+        <span className="text-white font-bold tracking-tight text-sm sm:text-base truncate">Mind Digital</span>
       </div>
 
       <a
