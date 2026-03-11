@@ -90,10 +90,10 @@ export function Features() {
       <div className="max-w-5xl mx-auto pb-24 px-6">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-          Por que a Máquina de Vendas VDA?
+          Por que a Máquina de Vendas <span className="text-vda-gradient">VDA</span>? 💸
         </h2>
         <p className="text-white/60 text-lg max-w-2xl mx-auto">
-          O método definitivo para quem quer resultados no digital sem precisar aparecer ou ser escravo do celular.
+          O método definitivo para quem quer resultados no digital sem precisar aparecer ou ser escravo do celular. 💰
         </p>
       </div>
 
@@ -106,12 +106,12 @@ export function Features() {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
           >
-            <SpotlightCard className="glass p-8 rounded-3xl group transition-colors h-full w-full">
+            <SpotlightCard className="glass p-8 rounded-3xl group transition-colors h-full w-full border-t border-t-[#C5A059]/20 hover:border-t-[#2BB673]/40">
               <div className="relative z-10">
-                <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform">
-                  <feat.icon className="w-6 h-6" />
+                <div className="w-14 h-14 bg-gradient-to-br from-[#C5A059]/10 to-[#2BB673]/10 border border-[#C5A059]/30 rounded-2xl flex items-center justify-center mb-6 text-white group-hover:scale-110 group-hover:border-[#2BB673]/50 transition-all">
+                  <feat.icon className="w-6 h-6 text-[#C5A059] group-hover:text-[#2BB673] transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{feat.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#2BB673] transition-colors">{feat.title}</h3>
                 <p className="text-white/70 leading-relaxed font-medium">
                   {feat.description}
                 </p>

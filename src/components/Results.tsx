@@ -8,12 +8,12 @@ export function Results() {
   return (
     <section className="w-full max-w-5xl mx-auto py-24 px-6 relative z-10">
       <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-white/50 mb-6 uppercase tracking-wider backdrop-blur-sm">
-          <Star className="w-3 h-3 text-yellow-500" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-[#C5A059]/30 text-xs font-semibold text-[#C5A059] mb-6 uppercase tracking-wider backdrop-blur-sm">
+          <Star className="w-3 h-3 text-[#C5A059] fill-[#C5A059]" />
           Resultados Reais
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-          Pessoas Comuns Faturando Todos os Dias
+          Pessoas Comuns <span className="text-vda-gradient border-b-2 border-[#2BB673]/30">Faturando Todos os Dias</span> 💵
         </h2>
       </div>
 

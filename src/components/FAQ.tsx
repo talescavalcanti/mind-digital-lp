@@ -31,7 +31,7 @@ export function FAQ() {
     <section className="w-full max-w-3xl mx-auto py-24 px-6 relative z-10 mb-20">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-          Perguntas Frequentes
+          Perguntas Frequentes <span className="text-vda-gradient">VDA</span>
         </h2>
       </div>
 

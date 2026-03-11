@@ -29,16 +29,16 @@ export function Hero() {
         className="w-full max-w-[600px] glass p-8 sm:p-10 rounded-3xl flex flex-col items-center text-center relative z-10"
       >
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-xs font-semibold text-white/80 mb-6 uppercase tracking-wider backdrop-blur-sm">
-          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          Automação Humanizada
+          <span className="w-2 h-2 rounded-full bg-[#2BB673] animate-pulse" />
+          MIND DIGITAL APRESENTA
         </div>
 
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white leading-tight">
-          Venda Todos os Dias Sem Precisar Aparecer
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-white leading-tight">
+          <span className="text-vda-gradient border-b-2 border-[#2BB673]/30">VDA</span>, o método que vai mudar a sua vida 💸
         </h1>
 
-        <p className="text-base sm:text-lg leading-relaxed text-white/70 font-medium mb-8">
-          Frustrado por postar conteúdo e não vender? Descubra a Máquina de Vendas que usa Inteligência Artificial para atrair, nutrir e fechar leads no automático.
+        <p className="text-sm sm:text-lg leading-relaxed text-white/70 font-medium mb-6 sm:mb-8 px-2 sm:px-0">
+          Aprenda o exato fluxo para atrair, nutrir e fechar leads no automático usando Inteligência Artificial. Sem aparecer e sem sobrecarga. 💰
         </p>
 
         {/* Primary CTA Button */}
@@ -55,8 +55,8 @@ export function Hero() {
           <CheckCircle2 className="w-5 h-5" />
         </motion.a>
 
-        <p className="text-xs text-white/40 mt-4 flex items-center justify-center gap-1">
-          <CheckCircle2 className="w-3 h-3" /> Assista à apresentação completa
+        <p className="text-xs text-white/50 mt-4 flex items-center justify-center gap-1">
+          <CheckCircle2 className="w-3 h-3 text-[#2BB673]" /> Assista à apresentação completa e libere a automação
         </p>
       </motion.div>
     </section>

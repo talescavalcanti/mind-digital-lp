@@ -53,6 +53,12 @@ body {
   .glass {
     @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
   }
+  .text-vda-gradient {
+    @apply bg-gradient-to-r from-[#C5A059] to-[#2BB673] text-transparent bg-clip-text;
+  }
+  .bg-vda-gradient {
+    @apply bg-gradient-to-r from-[#C5A059] to-[#2BB673];
+  }
 }
 
 .dark {
