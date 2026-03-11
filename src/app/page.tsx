@@ -20,8 +20,6 @@ export default function Home() {
       
       {/* Background Decorative Elements */}
       <ParticlesBackground />
-      <div className="fixed top-1/4 left-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[150px] pointer-events-none z-[-1]" />
-      <div className="fixed bottom-1/4 right-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[150px] pointer-events-none z-[-1]" />
 
       {!isLoading && (
         <Navbar />

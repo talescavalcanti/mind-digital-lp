@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark">
       <body
-        className={`${inter.className} antialiased min-h-screen relative selection:bg-white/20 selection:text-white`}
+        className={`${inter.className} bg-black text-white antialiased min-h-screen relative selection:bg-white/20 selection:text-white`}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)] pointer-events-none" />
+
         {children}
       </body>
     </html>
