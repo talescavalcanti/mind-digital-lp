@@ -10,6 +10,7 @@ import { Results } from "@/components/Results"
 import { FAQ } from "@/components/FAQ"
 import { Preloader } from "@/components/Preloader"
 import { AnimatePresence, motion } from "framer-motion"
+import { ParticlesBackground } from "@/components/ui/particles-background"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -18,6 +19,7 @@ export default function Home() {
     <main className="min-h-screen w-full relative flex flex-col items-center overflow-x-hidden">
       
       {/* Background Decorative Elements */}
+      <ParticlesBackground />
       <div className="fixed top-1/4 left-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[150px] pointer-events-none z-[-1]" />
       <div className="fixed bottom-1/4 right-1/4 w-[500px] h-[500px] bg-white/5 rounded-full blur-[150px] pointer-events-none z-[-1]" />
 

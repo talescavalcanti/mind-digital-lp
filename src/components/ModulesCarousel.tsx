@@ -63,7 +63,7 @@ export default function ModulesCarousel() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full bg-black py-16 overflow-hidden z-10">
+        <section ref={sectionRef} className="relative w-full bg-transparent py-16 overflow-hidden z-10">
             <div ref={headerRef} className="text-center mb-8 opacity-100">
                 <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
                     Módulos do <span className="text-[#00c853]">Método</span>

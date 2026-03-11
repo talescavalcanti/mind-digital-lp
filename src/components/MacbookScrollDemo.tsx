@@ -32,7 +32,7 @@ export default function MacbookScrollDemo() {
     }, []);
 
     return (
-        <div ref={containerRef} className="relative w-full overflow-hidden bg-black pb-20 pt-24">
+        <div ref={containerRef} className="relative w-full overflow-hidden bg-transparent pb-20 pt-24">
             {/* Mobile Alternative - Simple Text */}
             <div className="block sm:hidden pb-16 pt-0 px-4 text-center mt-[-40px]">
                 <h2 className="text-2xl font-bold text-white mb-4">
