@@ -56,7 +56,7 @@ export default function MacbookScrollDemo() {
                             text="Por dentro da área de membros."
                             speed={35}
                             cursor="_"
-                            className="inline-block text-vda-gradient"
+                            className="inline-block text-white"
                         />
                     }
                     badge={
