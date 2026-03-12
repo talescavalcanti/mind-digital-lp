@@ -2,19 +2,10 @@
 
 import { motion } from "framer-motion"
 import { CheckCircle2 } from "lucide-react"
-import { WarpBackground } from "@/components/ui/warp-background"
 
 export function Hero() {
   return (
     <section className="relative w-full flex flex-col items-center justify-center px-4 pt-32 pb-4">
-      {/* Warp Animated Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <WarpBackground className="w-full h-full border-none rounded-none p-0 bg-black" perspective={200} gridColor="rgba(255, 255, 255, 0.1)">
-          <div className="w-full h-full" />
-        </WarpBackground>
-        {/* Bottom Fade Mask */}
-        <div className="absolute bottom-0 left-0 right-0 h-[10%] bg-gradient-to-t from-black to-transparent pointer-events-none" />
-      </div>
 
 
       {/* Main Container for Hero */}
@@ -29,9 +20,12 @@ export function Hero() {
           MIND DIGITAL APRESENTA
         </div>
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-white leading-tight">
-          <span className="text-[#00c853] border-b-2 border-[#2BB673]/30">VDA</span>, o método que vai mudar a sua vida 💸
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-2 text-center">
+          <span className="text-[#00c853] border-b-2 border-[#2BB673]/30">MÉTODO VDA</span>
         </h1>
+        <p className="text-lg sm:text-2xl md:text-3xl font-bold text-white/90 tracking-wide mb-6 text-center">
+          Venda Direto no Automático💸
+        </p>
 
         <p className="text-sm sm:text-lg leading-relaxed text-white/70 font-medium mb-6 sm:mb-8 px-2 sm:px-0">
           O sistema com IA que me faz vender <span className="text-white font-bold">TODOS OS DIAS</span> no automático e pode te gerar <span className="text-white font-bold">R$500 POR DIA</span> ainda essa semana.
@@ -39,7 +33,7 @@ export function Hero() {
 
         {/* Primary CTA Button */}
         <motion.a
-          href="https://arthur-santos.com/vsl-vda/?code=6x9c4wl&utm_medium=1--oti--oti_j4arvzp196mmkyqlae"
+          href="https://checkout.applyfy.com.br/ref/cmkju6a2l0520mz1rcz4yb6u9"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}

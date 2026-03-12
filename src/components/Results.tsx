@@ -62,8 +62,8 @@ export function Results() {
         </h2>
       </div>
 
-      {/* Grid for exactly 3 items side-by-side */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto justify-items-center">
+      {/* Professional 3-column layout with centered alignment */}
+      <div className="flex flex-col md:flex-row gap-6 w-full max-w-5xl mx-auto justify-center items-center">
         {[
           "/social-proof/media__1773179066636.png",
           "/social-proof/media__1773179066693.png",
@@ -71,12 +71,12 @@ export function Results() {
         ].map((item, index) => (
           <div 
             key={index}
-            className="result-card opacity-0 h-[500px] w-full max-w-[320px] glass rounded-2xl overflow-hidden group transition-all duration-300 hover:scale-105 flex items-center justify-center relative shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+            className="result-card opacity-0 w-full max-w-[300px] rounded-[20px] overflow-hidden group transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 border border-white/10 hover:border-white/20 shadow-lg shadow-black/40 hover:shadow-xl hover:shadow-black/60"
           >
             <img 
               src={item}
               alt={`Social Proof ${index + 1}`}
-              className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-500 rounded-2xl"
+              className="block w-full h-auto group-hover:scale-105 transition-transform duration-700 ease-out"
             />
           </div>
         ))}
