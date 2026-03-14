@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { CheckCircle2 } from "lucide-react"
+import { handleCTAClick } from "@/utils/tiktok"
 
 export function Hero() {
   return (
@@ -34,6 +35,7 @@ export function Hero() {
         {/* Primary CTA Button */}
         <motion.a
           href="/go"
+          onClick={handleCTAClick}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className="w-full max-w-[320px] group relative flex items-center justify-center gap-2 bg-white text-black py-4 px-8 rounded-xl font-extrabold text-lg shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:shadow-[0_0_60px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden"

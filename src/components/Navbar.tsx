@@ -2,6 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { motion } from "framer-motion"
+import { handleCTAClick } from "@/utils/tiktok"
 
 export function Navbar() {
   return (
@@ -31,6 +32,7 @@ export function Navbar() {
 
       <a
         href="/go"
+        onClick={handleCTAClick}
         className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white text-black text-xs sm:text-sm font-bold rounded-full hover:scale-105 transition-transform shrink-0"
       >
         Acesse Aqui

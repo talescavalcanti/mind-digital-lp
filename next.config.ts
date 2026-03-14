@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/go',
+        destination: 'https://vsl-minddigital.vercel.app/',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { handleCTAClick } from "@/utils/tiktok"
 
 export function FinalCTA() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -65,6 +66,7 @@ export function FinalCTA() {
       <a
         ref={btnRef}
         href="/go"
+        onClick={handleCTAClick}
         className="group relative flex items-center justify-center gap-2 bg-white text-black py-4 px-10 rounded-xl font-extrabold text-lg shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:shadow-[0_0_60px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden hover:scale-[1.02] active:scale-[0.98]"
       >
         <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
