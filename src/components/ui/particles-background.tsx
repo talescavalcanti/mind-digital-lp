@@ -37,14 +37,14 @@ export function ParticlesBackground() {
         this.canvasHeight = canvasHeight
         this.x = Math.random() * canvasWidth
         this.y = Math.random() * canvasHeight
-        
+
         // Random size within range
         this.radius = particleRadiusRange[0] + Math.random() * (particleRadiusRange[1] - particleRadiusRange[0])
-        
+
         // Random drift (mostly upwards with slight horizontal sway)
         this.vx = (Math.random() - 0.5) * particleSpeed
         this.vy = -(Math.random() * particleSpeed + 0.1) // Always float up slightly
-        
+
         // Random initial opacity
         this.alpha = particleAlphaRange[0] + Math.random() * (particleAlphaRange[1] - particleAlphaRange[0])
       }
@@ -56,7 +56,7 @@ export function ParticlesBackground() {
         // Wrap around the edges
         if (this.x < 0) this.x = this.canvasWidth
         if (this.x > this.canvasWidth) this.x = 0
-        
+
         // If particle moves off top, respawn at bottom seamlessly
         if (this.y < -10) {
           this.y = this.canvasHeight + 10
@@ -97,14 +97,14 @@ export function ParticlesBackground() {
       // Using window dimensions ensure it covers the fixed background properly
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
-      
+
       // Re-init particles to fit new dimensions
       initParticles()
     }
 
     // Initial setup
     handleResize()
-    
+
     // Start animation loop
     render()
 
