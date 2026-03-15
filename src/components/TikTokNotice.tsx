@@ -20,7 +20,7 @@ export function TikTokNotice() {
           initial={{ opacity: 0, y: -20, height: 0 }}
           animate={{ opacity: 1, y: 0, height: "auto" }}
           exit={{ opacity: 0, y: -20, height: 0 }}
-          className="w-full max-w-[600px] mb-8 overflow-hidden rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl shadow-black/50 relative"
+          className="w-full max-w-[600px] mt-2 overflow-hidden rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl shadow-black/50 relative"
         >
           <div className="bg-[#2BB673]/20 px-4 py-3 flex items-center gap-3 border-b border-white/5">
             <AlertCircle className="w-5 h-5 text-[#2BB673]" />

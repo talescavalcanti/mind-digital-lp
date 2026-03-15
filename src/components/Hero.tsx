@@ -3,12 +3,9 @@
 import { motion } from "framer-motion"
 import { CheckCircle2 } from "lucide-react"
 
-import { TikTokNotice } from "./TikTokNotice"
-
 export function Hero() {
   return (
     <section className="relative w-full flex flex-col items-center justify-center px-4 pt-32 pb-4">
-      <TikTokNotice />
 
 
       {/* Main Container for Hero */}

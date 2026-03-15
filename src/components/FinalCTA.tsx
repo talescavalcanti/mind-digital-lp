@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { TikTokNotice } from "./TikTokNotice"
 
 export function FinalCTA() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -72,6 +73,9 @@ export function FinalCTA() {
         <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
         <span>QUERO COMEÇAR AGORA</span>
       </a>
+
+      <div className="w-full h-px bg-white/5 my-10" />
+      <TikTokNotice />
     </div>
   )
 }
