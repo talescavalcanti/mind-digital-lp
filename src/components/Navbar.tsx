@@ -1,8 +1,7 @@
 "use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { motion } from "framer-motion"
-import { handleCTAClick } from "@/utils/tiktok"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export function Navbar() {
   return (
@@ -31,8 +30,9 @@ export function Navbar() {
       </div>
 
       <a
-        href="/go"
-        onClick={handleCTAClick}
+        href="https://checkout.applyfy.com.br/ref/cmkju6a2l0520mz1rcz4yb6u9"
+        target="_blank"
+        rel="noopener noreferrer"
         className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white text-black text-xs sm:text-sm font-bold rounded-full hover:scale-105 transition-transform shrink-0"
       >
         Acesse Aqui
