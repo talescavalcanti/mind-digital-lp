@@ -1,9 +1,19 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { ExternalLink, Smartphone, AlertCircle } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export function TikTokNotice() {
+  const [isTikTok, setIsTikTok] = useState(false)
+
+  useEffect(() => {
+    const ua = navigator.userAgent || navigator.vendor || (window as any).opera
+    if (ua.toLowerCase().indexOf("tiktok") > -1) {
+      setIsTikTok(true)
+    }
+  }, [])
+
+  if (!isTikTok) return null
+
   return (
     <section
       id="tiktok-notice"
