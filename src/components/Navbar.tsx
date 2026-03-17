@@ -2,8 +2,28 @@
 
 import { motion } from "framer-motion"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { useEffect, useState } from "react"
 
 export function Navbar() {
+  const [isTikTok, setIsTikTok] = useState(false)
+
+  useEffect(() => {
+    const ua = navigator.userAgent || navigator.vendor || (window as any).opera
+    if (ua.toLowerCase().indexOf("tiktok") > -1) {
+      setIsTikTok(true)
+    }
+  }, [])
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isTikTok) {
+      e.preventDefault()
+      const noticeSection = document.getElementById('tiktok-notice')
+      if (noticeSection) {
+        noticeSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
+
   return (
     <motion.header
       initial={{ y: -20, opacity: 0, x: "-50%" }}
@@ -30,8 +50,9 @@ export function Navbar() {
       </div>
 
       <a
-        href="https://checkout.applyfy.com.br/ref/cmkju6a2l0520mz1rcz4yb6u9"
-        target="_blank"
+        href={isTikTok ? "#tiktok-notice" : "https://checkout.applyfy.com.br/ref/cmkju6a2l0520mz1rcz4yb6u9"}
+        onClick={handleNavClick}
+        target={isTikTok ? "_self" : "_blank"}
         rel="noopener noreferrer"
         className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white text-black text-xs sm:text-sm font-bold rounded-full hover:scale-105 transition-transform shrink-0"
       >
