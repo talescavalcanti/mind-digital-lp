@@ -11,6 +11,7 @@ import { FAQ } from "@/components/FAQ"
 import { Preloader } from "@/components/Preloader"
 import { AnimatePresence, motion } from "framer-motion"
 import { FinalCTA } from "@/components/FinalCTA"
+import { TikTokNotice } from "@/components/TikTokNotice"
 import { ParticlesBackground } from "@/components/ui/particles-background"
 
 export default function Home() {
@@ -35,6 +36,7 @@ export default function Home() {
         <FAQ />
 
         <FinalCTA />
+        <TikTokNotice />
 
         {/* Footer */}
         <footer className="w-full py-8 text-center text-white/30 text-xs border-t border-white/5 mt-10">

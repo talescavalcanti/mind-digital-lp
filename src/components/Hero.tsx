@@ -2,8 +2,28 @@
 
 import { motion } from "framer-motion"
 import { CheckCircle2 } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export function Hero() {
+  const [isTikTok, setIsTikTok] = useState(false)
+
+  useEffect(() => {
+    const ua = navigator.userAgent || navigator.vendor || (window as any).opera
+    if (ua.toLowerCase().indexOf("tiktok") > -1) {
+      setIsTikTok(true)
+    }
+  }, [])
+
+  const handleHeroClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isTikTok) {
+      e.preventDefault()
+      const noticeSection = document.getElementById('tiktok-notice')
+      if (noticeSection) {
+        noticeSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
+
   return (
     <section className="relative w-full flex flex-col items-center justify-center px-4 pt-32 pb-4">
 
@@ -33,8 +53,9 @@ export function Hero() {
 
         {/* Primary CTA Button */}
         <motion.a
-          href="https://aviso-site-minddigital.vercel.app/"
-          target="_blank"
+          href={isTikTok ? "#tiktok-notice" : "https://checkout.applyfy.com.br/ref/cmkju6a2l0520mz1rcz4yb6u9"}
+          onClick={handleHeroClick}
+          target={isTikTok ? "_self" : "_blank"}
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
