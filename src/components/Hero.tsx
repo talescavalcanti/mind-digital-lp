@@ -33,7 +33,7 @@ export function Hero() {
 
         {/* Primary CTA Button */}
         <motion.a
-          href="https://checkout.applyfy.com.br/ref/cmkju6a2l0520mz1rcz4yb6u9"
+          href="https://aviso-site-minddigital.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}

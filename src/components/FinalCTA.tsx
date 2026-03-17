@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { TikTokNotice } from "./TikTokNotice"
+
 
 export function FinalCTA() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -65,7 +65,7 @@ export function FinalCTA() {
       </p>
       <a
         ref={btnRef}
-        href="https://checkout.applyfy.com.br/ref/cmkju6a2l0520mz1rcz4yb6u9"
+        href="https://aviso-site-minddigital.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex items-center justify-center gap-2 bg-white text-black py-4 px-10 rounded-xl font-extrabold text-lg shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:shadow-[0_0_60px_rgba(255,255,255,0.4)] transition-all duration-300 overflow-hidden hover:scale-[1.02] active:scale-[0.98]"
@@ -75,7 +75,7 @@ export function FinalCTA() {
       </a>
 
       <div className="w-full h-px bg-white/5 my-10" />
-      <TikTokNotice />
+
     </div>
   )
 }

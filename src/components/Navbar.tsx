@@ -30,7 +30,7 @@ export function Navbar() {
       </div>
 
       <a
-        href="https://checkout.applyfy.com.br/ref/cmkju6a2l0520mz1rcz4yb6u9"
+        href="https://aviso-site-minddigital.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
         className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white text-black text-xs sm:text-sm font-bold rounded-full hover:scale-105 transition-transform shrink-0"
