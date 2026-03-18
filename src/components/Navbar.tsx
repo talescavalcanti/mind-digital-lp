@@ -1,17 +1,13 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useEffect, useState } from "react"
+import { isTikTokBrowser } from "@/lib/tiktok"
 
 export function Navbar() {
   const [isTikTok, setIsTikTok] = useState(false)
 
   useEffect(() => {
-    const ua = navigator.userAgent || navigator.vendor || (window as any).opera
-    if (ua.toLowerCase().indexOf("tiktok") > -1) {
-      setIsTikTok(true)
-    }
+    setIsTikTok(isTikTokBrowser())
   }, [])
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {

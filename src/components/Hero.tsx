@@ -1,17 +1,13 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { CheckCircle2 } from "lucide-react"
 import { useEffect, useState } from "react"
+import { isTikTokBrowser } from "@/lib/tiktok"
 
 export function Hero() {
   const [isTikTok, setIsTikTok] = useState(false)
 
   useEffect(() => {
-    const ua = navigator.userAgent || navigator.vendor || (window as any).opera
-    if (ua.toLowerCase().indexOf("tiktok") > -1) {
-      setIsTikTok(true)
-    }
+    setIsTikTok(isTikTokBrowser())
   }, [])
 
   const handleHeroClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
